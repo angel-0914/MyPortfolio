@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angel Mae Unabia - IT Support Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #000000, #0d0d0d, #1a1a1a, #000000);
+      background-size: 400% 400%;
+      animation: gradientMove 18s ease infinite;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .floating { animation: float 4s ease-in-out infinite; }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    .content-section { display: none; }
+    .active-section { display: block; }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <header class="flex justify-between items-center p-6 bg-black bg-opacity-60 fixed w-full top-0 z-50">
+    <h1 class="text-xl font-bold">MY PORTFOLIO</h1>
+    <div class="relative">
+      <button id="menu-btn" class="flex flex-col space-y-1 cursor-pointer">
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+        <span class="block w-6 h-0.5 bg-white"></span>
+      </button>
+      <nav id="menu" class="hidden absolute right-0 mt-2 bg-gray-800 rounded shadow-lg flex-col">
+        <button class="px-4 py-2 hover:bg-yellow-500 text-left menu-link" data-target="home">Home</button>
+        <button class="px-4 py-2 hover:bg-yellow-500 text-left menu-link" data-target="about">About Me</button>
+        <button class="px-4 py-2 hover:bg-yellow-500 text-left menu-link" data-target="skills">Skills</button>
+        <button class="px-4 py-2 hover:bg-yellow-500 text-left menu-link" data-target="experience">Experience</button>
+        <button class="px-4 py-2 hover:bg-yellow-500 text-left menu-link" data-target="education">Education</button>
+        <button class="px-4 py-2 hover:bg-yellow-500 text-left menu-link" data-target="contact">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24 space-y-16">
+
+    <!-- Home -->
+    <section id="home" class="content-section active-section h-screen flex flex-col md:flex-row items-center justify-center p-6 gap-8">
+      <div data-aos="fade-right">
+        <img src="images/angelprofile.JPG" 
+             alt="Angel Mae Unabia" 
+             class="w-64 h-64 rounded-full object-cover shadow-lg floating">
+      </div>
+      <div class="text-center md:text-left space-y-2" data-aos="fade-left">
+        <p class="text-xl">Hello, I am</p>
+        <h1 class="text-5xl font-bold">Angel Mae <br> Unabia</h1>
+        <p class="text-2xl mt-2 text-yellow-400">IT Support Specialist</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about-section">
+      <h2>About Me</h2>
+      <p>
+        I am a Bachelor of Science in Information Technology graduate with experience in providing technical 
+        support, troubleshooting, and system maintenance. I have handled IT equipment setup, LAN configurations, 
+        software installation, and assisted users with technical issues across hardware, software, and networks.
+      </p>
+      <p>
+        My background in both IT support and system development enables me to quickly diagnose and resolve 
+        problems, document technical procedures, and deliver effective solutions to maintain smooth IT operations.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="content-section active-section p-8">
+      <h2 class="text-3xl font-bold mb-6 text-center">Technical Skills</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 text-center">
+        <p>Hardware & Software Troubleshooting</p>
+        <p>LAN / Network Configuration</p>
+        <p>Microsoft 365 & Teams</p>
+        <p>Active Directory & User Management</p>
+        <p>System Installation & Imaging</p>
+        <p>Printer & Peripheral Setup</p>
+        <p>Ticketing Systems</p>
+        <p>Basic Web & Database Management</p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="content-section active-section p-8" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">Experience</h2>
+      
+      <h3 class="text-xl font-bold">IT Support / Web Developer – OJT (6 months) @ Sibonga NHS</h3>
+      <ul class="list-disc ml-6 mb-6">
+        <li>Provided technical support for PC, printer, and network troubleshooting</li>
+        <li>Configured and maintained LAN connections and shared drives</li>
+        <li>Assisted with software installation, updates, and user access</li>
+        <li>Managed IT equipment inventory and performed preventive maintenance</li>
+        <li>Handled digital documentation and data backup tasks</li>
+        <li>Developed and maintained internal systems to improve workflow</li>
+      </ul>
+
+      <h3 class="text-xl font-bold">Freelance IT Support / System Developer (2021–Present)</h3>
+      <ul class="list-disc ml-6">
+        <li>Provided remote technical assistance and troubleshooting</li>
+        <li>Supported small businesses with software setup, data management, and email configuration</li>
+        <li>Developed simple web-based systems for record tracking and reporting</li>
+        <li>Assisted in network setup, connectivity issues, and security updates</li>
+        <li>Managed documentation and end-user training for implemented systems</li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="content-section active-section p-8" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6 text-white">Education</h2>
+      <div style="color: #fff;">
+        <p><strong>Bachelor of Science in Information Technology major in Software Development</strong></p>
+        <p>Sibonga Community College – (2025)</p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="content-section active-section p-8" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+      <p class="mb-4">You can reach me through:</p>
+      <div class="space-y-2">
+        <p><strong>Email:</strong> <a href="mailto:unabiaangelmaeg@gmail.com" class="text-yellow-400 hover:underline">unabiaangelmaeg@gmail.com</a></p>
+        <p><strong>Phone:</strong> +63 907 793 4408</p>
+        <p><strong>Location:</strong> Carcar City, Cebu, Philippines</p>
+      </div>
+      <div class="flex space-x-4 mt-4">
+        <a href="https://github.com/angel20014" target="_blank">
+          <img src="https://img.icons8.com/glyph-neue/48/github.png" class="w-8 h-8">
+        </a>
+        <a href="https://www.linkedin.com/in/angel-mae-g-unabia-201312374/" target="_blank">
+          <img src="https://img.icons8.com/fluency/48/linkedin.png" class="w-8 h-8">
+        </a>
+      </div>
+    </section>
+
+    <section class="p-8 text-center" data-aos="fade-up">
+      <p class="text-xl italic text-yellow-400">“Passionate about solving IT challenges and providing reliable technical support.”</p>
+    </section>
+
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    const links = document.querySelectorAll(".menu-link");
+    const sections = document.querySelectorAll(".content-section");
+    menuBtn.addEventListener("click", () => menu.classList.toggle("hidden"));
+    sections.forEach(section => section.classList.add("active-section"));
+    links.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const target = link.getAttribute("data-target");
+        sections.forEach(section => section.classList.remove("active-section"));
+        document.getElementById(target).classList.add("active-section");
+        menu.classList.add("hidden");
+        document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+      });
+    });
+  </script>
+</body>
+</html>
